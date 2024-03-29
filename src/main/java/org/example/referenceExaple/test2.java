@@ -12,4 +12,3 @@ public class test2 {
         System.out.println(temp.getOb().getY());
     }
 }
-java sring boot practive
