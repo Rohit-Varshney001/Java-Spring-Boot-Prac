@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--  this is our beans -->
+
+    <bean class="org.example.constuctorIngestion.Certificate" name="certificateRef">
+        <constructor-arg value="Java Developer"/>
+    </bean>
+
+
+    <bean class="org.example.constuctorIngestion.person" name="person">
+        <constructor-arg index="0" value="Rohit" type="java.lang.String"/>
+        <constructor-arg index="1" value="123" type="int"/>
+        <constructor-arg index="2" ref="certificateRef"/>
+    </bean>
+
+
+    <bean class="org.example.constuctorIngestion.Addition" name="add">
+        <constructor-arg index="0" type="java.lang.String" value="12"/>
+        <constructor-arg index="1" type="java.lang.String" value="34"/>
+    </bean>
+
+
+<!--    C Schema-->
+<!--    <bean class="org.example.constuctorIngestion.Certificate" name="certificateRef" c:name="Pyhton Programming"/>-->
+
+</beans>
